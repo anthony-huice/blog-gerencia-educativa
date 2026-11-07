@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión &amp; Tecno-Pedagogía | Blog de Gerencia de Sistemas Educativos</title>
+  <meta name="description" content="Blog académico e investigativo sobre la Gerencia de Sistemas Educativos basados en Tecnología. Liderazgo, telemática, analítica de aprendizaje y prospectiva directiva.">
+  <meta name="author" content="Anthony Huice">
+  <meta name="keywords" content="Gerencia Educativa, Tecnología Educativa, Sistemas Telemáticos, Liderazgo, Blended Learning, Learning Analytics, Inteligencia Artificial">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Barra superior indicadora de progreso de lectura -->
+  <div id="reading-progress" role="progressbar" aria-label="Progreso de lectura"></div>
+
+  <!-- Encabezado y Navbar Principal -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#inicio" class="brand-link">
+        <div class="brand-icon">GP</div>
+        <div>
+          <span class="brand-title">Gestión &amp; Tecno-Pedagogía</span>
+          <span class="brand-subtitle">Gerencia de Sistemas Educativos basados en Tecnología</span>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar modo claro u oscuro">
+          <span id="theme-icon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner Hero con Identificación del Blog y Perfil del Autor -->
+  <section class="hero-section" id="inicio">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="academic-badge">
+          <span>🏛️ Actividad Evaluativa Cuarta Unidad | Ecosistema Digital</span>
+        </div>
+        <h1>Liderazgo Estratégico y Arquitectura Telemática en la Escuela Contemporánea</h1>
+        <p class="lead">
+          Una bitácora de reflexión crítica, rigor académico y divulgación situada sobre los desafíos, modelos y directrices que transforman la gestión de instituciones educativas mediadas por tecnologías de la información y la comunicación.
+        </p>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap; font-size:0.85rem; color:var(--text-light);">
+          <span>📚 7 Artículos Monográficos</span>
+          <span>🎙️ 1 Podcast Educativo Oficial</span>
+          <span>🎥 1 Video-Exposición / Ponencia</span>
+          <span>📖 Normas APA 7.ª Edición</span>
+        </div>
+      </div>
+
+      <!-- Tarjeta de Perfil del Autor (Requisito 4 e Identificación) -->
+      <aside class="profile-card">
+        <div class="profile-avatar-wrapper">
+          <img src="assets/profile_photo.jpg" alt="Fotografía de perfil de Anthony Huice" class="profile-avatar" loading="lazy">
+          <div class="profile-verified-badge" title="Autor e Investigador Verificado">✓</div>
+        </div>
+        <h2 class="profile-name">Anthony Huice</h2>
+        <div class="profile-role">Investigador en Tecnología Educativa</div>
+        <p class="profile-bio">
+          Especialista en desarrollo de sistemas telemáticos, diseño instruccional y gestión de plataformas para la educación a distancia. Coordinador del presente espacio de divulgación tecnopedagógica.
+        </p>
+        <div class="collaborator-tag">
+          <strong>Colaboración Especial en Audio:</strong>
+          Lic. Emily Leidy Chacón de Romero<br>
+          <span style="font-size:0.72rem; color:var(--text-light);">Centro Local Anzoátegui — UNA</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Controles: Barra de Búsqueda Reactiva y Nube de Filtros por Etiquetas -->
+  <section class="controls-section">
+    <div class="search-box-wrapper">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search-input" class="search-input" placeholder="Buscar por tema, autor, concepto gerencial o palabra clave..." aria-label="Buscar artículos">
+    </div>
+    <div class="tag-cloud" id="tag-cloud">
+      <span style="font-size:0.775rem; font-weight:700; color:var(--text-light); margin-right:0.25rem;">Filtrar por:</span>
+      <button class="tag-filter-btn active" data-tag="all">Todas las Entradas (7)</button>
+      <button class="tag-filter-btn" data-tag="LiderazgoEducativo">#LiderazgoEducativo</button>
+      <button class="tag-filter-btn" data-tag="TransformacionDigital">#TransformacionDigital</button>
+      <button class="tag-filter-btn" data-tag="GestionEscolar">#GestionEscolar</button>
+      <button class="tag-filter-btn" data-tag="ComunicacionDigital">#ComunicacionDigital</button>
+      <button class="tag-filter-btn" data-tag="PresenciaCognitiva">#PresenciaCognitiva</button>
+      <button class="tag-filter-btn" data-tag="AprendizajeMezclado">#AprendizajeMezclado</button>
+      <button class="tag-filter-btn" data-tag="ArquitecturaEdTech">#ArquitecturaEdTech</button>
+      <button class="tag-filter-btn" data-tag="SistemasLMS">#SistemasLMS</button>
+      <button class="tag-filter-btn" data-tag="Interoperabilidad">#Interoperabilidad</button>
+      <button class="tag-filter-btn" data-tag="GerenciaEducativa">#GerenciaEducativa</button>
+      <button class="tag-filter-btn" data-tag="PodcastPedagogico">#PodcastPedagogico</button>
+      <button class="tag-filter-btn" data-tag="LiderazgoSituacional">#LiderazgoSituacional</button>
+      <button class="tag-filter-btn" data-tag="LearningAnalytics">#LearningAnalytics</button>
+      <button class="tag-filter-btn" data-tag="GobernanzaDeDatos">#GobernanzaDeDatos</button>
+      <button class="tag-filter-btn" data-tag="TomaDeDecisiones">#TomaDeDecisiones</button>
+      <button class="tag-filter-btn" data-tag="InteligenciaArtificial">#InteligenciaArtificial</button>
+      <button class="tag-filter-btn" data-tag="EticaEducativa">#EticaEducativa</button>
+      <button class="tag-filter-btn" data-tag="PoliticasInstitucionales">#PoliticasInstitucionales</button>
+      <button class="tag-filter-btn" data-tag="ProspectivaEducativa">#ProspectivaEducativa</button>
+      <button class="tag-filter-btn" data-tag="ModelosHibridos">#ModelosHibridos</button>
+      <button class="tag-filter-btn" data-tag="Educacion2030">#Educacion2030</button>
+    </div>
+  </section>
+
+  <!-- Feed Principal de Entradas del Blog -->
+  <main class="main-container">
+    <div class="articles-count-info">
+      <span id="visible-count">Mostrando 7 de 7 artículos académicos</span>
+      <span style="font-size:0.775rem;">Formato normalizado: 600 - 1200 palabras por artículo</span>
+    </div>
+
+    <!-- ====================================================================
+         ENTRADA 1: Liderazgo Transformacional y Cultura Digital
+         ==================================================================== -->
+    <article class="article-card" id="articulo-1" data-tags="LiderazgoEducativo TransformacionDigital GestionEscolar">
+      <header class="article-metaphor-header">
+        <svg class="metaphor-bg-art" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" />
+          <path d="M50 20 L50 80 M20 50 L80 50" stroke="currentColor" stroke-width="1.5" />
+          <circle cx="50" cy="50" r="10" fill="currentColor" />
+        </svg>
+        <span class="metaphor-badge">Metáfora Visual: El Director de Orquesta Telemática</span>
+        <p class="metaphor-caption">
+          «El gerente educativo no ejecuta cada instrumento individualmente; diseña la partitura de la cultura organizacional y armoniza las voluntades de la comunidad para que la tecnología no desentone con la pedagogía.»
+        </p>
+      </header>
+
+      <div class="article-body">
+        <div class="article-meta-bar">
+          <span class="meta-item">📅 Octubre 2026</span>
+          <span class="meta-item">⏱️ Lectura: 6 min</span>
+          <span class="meta-item">👤 Por Anthony Huice</span>
+          <div class="article-tags-wrapper">
+            <span class="article-tag">#LiderazgoEducativo</span>
+            <span class="article-tag">#TransformacionDigital</span>
+            <span class="article-tag">#GestionEscolar</span>
+          </div>
+        </div>
+
+        <h2 class="article-title">¿Gestionar la rutina o liderar la incertidumbre? El giro copernicano del directivo escolar ante la disrupción telemática</h2>
+
+        <!-- Bloque 1: Título y Contexto -->
+        <section class="context-trigger-box">
+          <div class="context-trigger-title">⚡ Hecho Noticioso &amp; Disparador Contextual</div>
+          <p>
+            Durante los últimos años, un informe global del Instituto Internacional de Planeamiento de la Educación (<a href="https://www.iiep.unesco.org" target="_blank" rel="noopener">IIPE-UNESCO, 2023</a>) reveló que más del 68% de los proyectos de modernización tecnológica en instituciones educativas latinoamericanas se estancan no por insuficiencia presupuestaria o carencia de hardware, sino por la rigidez burocrática de los equipos directivos y su incapacidad para gestionar la resistencia cultural del cuerpo docente. En múltiples planteles, las aulas virtuales quedaron reducidas a repositorios estáticos de documentos PDF, evidenciando una desconexión crítica entre la adquisición técnica y el liderazgo transformacional.
+          </p>
+        </section>
+
+        <!-- Bloque 2: Análisis Crítico -->
+        <section class="critical-analysis-section">
+          <h3>La obsolescencia del paradigma burocrático-normativo</h3>
+          <p>
+            Históricamente, la administración escolar ha estado condicionada por el <strong>modelo normativo y burocrático</strong> de corte weberiano, caracterizado por la subordinación jerárquica, la centralización de decisiones y la obsesión por el cumplimiento de reglamentos formales. Como advierte <a href="https://dialnet.unirioja.es" target="_blank" rel="noopener">Fullan (2016)</a>, este enfoque concebía al directivo como un custodio del orden establecido, cuya tarea fundamental consistía en fiscalizar la puntualidad, verificar la entrega de planificaciones impresas y evitar desviaciones operativas. Sin embargo, en el escenario telemático contemporáneo —marcado por la volatilidad epistemológica, la ubicuidad de la información y la descentralización de los canales de comunicación—, este esquema de mando y control resulta no solo ineficaz, sino directamente lesivo para la innovación formativa.
+          </p>
+          <p>
+            La incorporación de tecnologías de la información y la comunicación (TIC) en las instituciones educativas demanda lo que <a href="https://www.redalyc.org" target="_blank" rel="noopener">Chiavenato (2014)</a> clasifica como un tránsito hacia la <strong>organización abierta y adaptativa</strong>. Un sistema educativo no puede ser gestionado como un mecanismo de relojería invariable; constituye un <em>sistema abierto, altamente permeable e interconectado</em> con las demandas de su entorno social, familiar y económico. Cuando la gerencia escolar intenta encorsetar las prácticas digitales dentro de trámites decimonónicos, el profesorado percibe a la plataforma virtual como una sobrecarga administrativa punitiva y no como un entorno de emancipación pedagógica.
+          </p>
+
+          <h3>El liderazgo transformacional como palanca tecno-pedagógica</h3>
+          <p>
+            Frente al colapso del control vertical, emerge el <strong>liderazgo transformacional</strong> teorizado por <a href="https://psycnet.apa.org" target="_blank" rel="noopener">Bass y Avolio (1994)</a>, cuya pertinencia en la gerencia telemática es indiscutible. Este estilo de dirección no se fundamenta en la coerción ni en la recompensa transaccional inmediata, sino en cuatro pilares catalizadores: la <em>influencia idealizada</em> (liderar con el ejemplo en el uso ético y solvente de la tecnología), la <em>motivación inspiracional</em> (comunicar una visión compartida de futuro escolar), la <em>estimulación intelectual</em> (fomentar la experimentación metodológica docente sin penalizar el error) y la <em>consideración individualizada</em> (acompañar las trayectorias de capacitación según las brechas de cada profesor).
+          </p>
+          <p>
+            El verdadero gerente de sistemas educativos basados en tecnología entiende que su misión primordial consiste en <strong>orquestar el talento humano y crear un clima institucional de confianza</strong>. Como sostienen los estudios de la <a href="https://unesdoc.unesco.org" target="_blank" rel="noopener">UNESCO (2021)</a> sobre la reinvención del contrato social por la educación, la infraestructura digital más potente carece de impacto duradero si no va acompañada de un empoderamiento auténtico de los docentes como diseñadores instruccionales y coinvestigadores. El directivo contemporáneo sustituye la orden jerárquica por la facilitación reflexiva, transformando el campus institucional en una auténtica comunidad de práctica colaborativa.
+          </p>
+
+          <!-- Recurso Multimedia Adicional: Infografía Interactiva -->
+          <div class="multimedia-container">
+            <div class="multimedia-header">
+              <span>📊 Recurso Multimedia: Matriz Comparativa de Enfoques Directivos</span>
+            </div>
+            <div class="multimedia-body">
+              <div class="infographic-box">
+                <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
+                  Contraste estructural entre los paradigmas de gestión escolar frente al ecosistema digital:
+                </p>
+                <div class="diagram-grid">
+                  <div class="diagram-item" style="border-left-color: #ef4444;">
+                    <h4 style="color:#ef4444;">1. Modelo Normativo Burocrático</h4>
+                    <p>• Enfoque de control y fiscalización punitiva.<br>• El LMS se reduce a control de asistencia y descargas.<br>• Liderazgo autocrático cerrado al cambio.<br>• Aislamiento entre docentes y áreas académicas.</p>
+                  </div>
+                  <div class="diagram-item" style="border-left-color: #3b82f6;">
+                    <h4 style="color:#3b82f6;">2. Modelo Estratégico Situacional</h4>
+                    <p>• Análisis FODA permanente de capacidades telemáticas.<br>• Flexibilidad negociadora ante contingencias socioeconómicas.<br>• Liderazgo adaptable a la viabilidad institucional.<br>• Articulación entre infraestructura y currículo.</p>
+                  </div>
+                  <div class="diagram-item" style="border-left-color: #10b981;">
+                    <h4 style="color:#10b981;">3. Modelo Transformacional Digital</h4>
+                    <p>• Cultura de innovación pedagógica centrada en el estudiante.<br>• Liderazgo facilitador, empático y visionario.<br>• Comunidades de práctica y co-diseño de recursos multimedia.<br>• Decisiones basadas en analítica y evidencias de aprendizaje.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            En síntesis, gerenciar la tecnología educativa no significa convertirse en un técnico informático de soporte, sino en un <strong>estratega del aprendizaje institucional</strong>. Significa alinear las inversiones en hardware con los fines socio-pedagógicos supremos: garantizar una formación humana integral, equitativa y crítica que capacite a los estudiantes para desempeñarse con autonomía en la sociedad global del conocimiento.
+          </p>
+        </section>
+
+        <!-- Bloque 3: Pregunta de Discusión y Foros -->
+        <section class="discussion-block">
+          <div class="discussion-label">💬 Espacio de Interacción &amp; Debate Comunitario</div>
+          <div class="discussion-question-text">
+            ¿En su experiencia institucional, el equipo directivo actúa como un facilitador visionario que estimula la creatividad tecno-pedagógica, o predomina un filtro burocrático que ralentiza la innovación? ¿Qué acción de gestión concreta desbloquearía esa tensión en su contexto?
+          </div>
+          <form class="comment-form" data-article-id="1">
+            <input type="text" class="comment-author-input comment-input" placeholder="Tu nombre y cargo académico / institución..." style="min-height: auto; padding: 0.5rem;" required>
+            <textarea class="comment-text-input comment-input" placeholder="Escribe tu reflexión o aporte crítico para el debate..." required></textarea>
+            <button type="submit" class="comment-submit-btn">Publicar Comentario en el Blog</button>
+          </form>
+          <div class="comments-feed" id="comments-feed-1"></div>
+        </section>
+
+        <!-- Referencias APA 7 -->
+        <footer class="apa-references">
+          <div class="apa-title">Referencias Bibliográficas (Normas APA 7.ª Edición)</div>
+          <ul class="apa-list">
+            <li>Bass, B. M., &amp; Avolio, B. J. (1994). <em>Improving organizational effectiveness through transformational leadership</em>. SAGE Publications.</li>
+            <li>Chiavenato, I. (2014). <em>Introducción a la teoría general de la administración</em> (8.ª ed.). McGraw-Hill Interamericana.</li>
+            <li>Fullan, M. (2016). <em>The new meaning of educational change</em> (5th ed.). Teachers College Press.</li>
+            <li>IIPE-UNESCO. (2023). <em>Transformación digital en la educación de América Latina: Desafíos de gobernanza y liderazgo escolar</em>. Instituto Internacional de Planeamiento de la Educación. <a href="https://unesdoc.unesco.org" target="_blank" rel="noopener">https://unesdoc.unesco.org</a></li>
+            <li>UNESCO. (2021). <em>Reimaginar juntos nuestros futuros: Un nuevo contrato social para la educación</em>. Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura.</li>
+          </ul>
+        </footer>
+      </div>
+    </article>
+
+    <!-- ====================================================================
+         ENTRADA 2: Ponencia Unidad 2 (Requisito 7 Obligatorio)
+         ==================================================================== -->
+    <article class="article-card" id="articulo-2" data-tags="ComunicacionDigital PresenciaCognitiva AprendizajeMezclado">
+      <header class="article-metaphor-header">
+        <svg class="metaphor-bg-art" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 50 Q50 10 90 50 Q50 90 10 50" stroke="currentColor" stroke-width="2" />
+          <circle cx="25" cy="50" r="6" fill="currentColor" />
+          <circle cx="75" cy="50" r="6" fill="currentColor" />
+          <path d="M25 50 L75 50" stroke="currentColor" stroke-width="2" stroke-dasharray="3 3" />
+        </svg>
+        <span class="metaphor-badge">Metáfora Visual: Los Puentes Invisibles de la Telemática</span>
+        <p class="metaphor-caption">
+          «La comunicación digital en la educación a distancia no anula la distancia física; la transmuta en proximidad psicológica y resonancia cognitiva mediante el diseño armónico de canales síncronos y asíncronos.»
+        </p>
+      </header>
+
+      <div class="article-body">
+        <div class="article-meta-bar">
+          <span class="meta-item">📅 Octubre 2026</span>
+          <span class="meta-item">⏱️ Lectura: 7 min</span>
+          <span class="meta-item">🎥 Incluye Ponencia en Video</span>
+          <div class="article-tags-wrapper">
+            <span class="article-tag">#ComunicacionDigital</span>
+            <span class="article-tag">#PresenciaCognitiva</span>
+            <span class="article-tag">#AprendizajeMezclado</span>
+          </div>
+        </div>
+
+        <h2 class="article-title">Más allá de la pantalla fría: Presencia cognitiva, sincronía y el arte de articular el blended learning</h2>
+
+        <!-- Bloque 1: Título y Contexto -->
+        <section class="context-trigger-box">
+          <div class="context-trigger-title">⚡ Hecho Noticioso &amp; Disparador Contextual</div>
+          <p>
+            En el marco de la <strong>Unidad 2 de nuestro programa formativo</strong>, desarrollamos una ponencia estructurada para evaluar los canales de interacción telemática en la educación virtual. El detonante de dicha investigación radicó en la crisis generalizada de "fatiga de pantalla" y saturación por videoconferencias que experimentaron miles de centros educativos al confundir la educación a distancia con la mera transposición pasiva de clases magistrales frente a una cámara web. Este artículo contextualiza la ponencia y expone por qué el blended learning auténtico exige una ingeniería comunicacional rigurosa.
+          </p>
+        </section>
+
+        <!-- Bloque 2: Análisis Crítico -->
+        <section class="critical-analysis-section">
+          <h3>La tensión dialéctica entre sincronicidad y asincronía</h3>
+          <p>
+            Uno de los errores conceptuales más frecuentes en la gerencia telemática consiste en asumir que una mayor cantidad de horas de videoconferencia interactiva se traduce automáticamente en una mayor calidad educativa. Como demostramos en la video-exposición de la Unidad 2, la <strong>comunicación sincrónica</strong> —mediada por herramientas de video y voz como WebRTC, BigBlueButton, Zoom o Google Meet— cumple un rol afectivo y relacional insustituible: fomenta la <em>presencia social inmediata</em>, genera sensación de comunidad, reduce el aislamiento transaccional y facilita la resolución expedita de dudas operativas.
+          </p>
+          <p>
+            No obstante, su uso excesivo acarrea severas desventajas pedagógicas y operativas. En primer término, impone una rigidez horaria contraria a la flexibilidad fundacional de la educación a distancia; en segundo término, acentúa la brecha de equidad al excluir a participantes con conexiones de ancho de banda restringido o alta latencia; y, en tercer lugar, reduce la cognición profunda al privilegiar la respuesta impulsiva sobre la reflexión pausada. Frente a ello, la <strong>comunicación asincrónica</strong> —instrumentada mediante foros temáticos estructurados, mensajería institucional y repositorios anotados— constituye el verdadero motor del pensamiento crítico, permitiendo al estudiante consultar fuentes complementarias, elaborar síntesis argumentativas rigurosas y autorregular su proceso de asimilación según sus propios ritmos biológicos e intelectuales (<a href="https://www.tandfonline.com" target="_blank" rel="noopener">Garrison et al., 2000</a>).
+          </p>
+
+          <!-- Recurso Multimedia Principal: Video de la Ponencia (Requisito 7) -->
+          <div class="multimedia-container">
+            <div class="multimedia-header">
+              <span>🎥 Ponencia Oficial Desarrollada en la Unidad 2 | Video-Exposición</span>
+            </div>
+            <div class="multimedia-body">
+              <div class="video-wrapper">
+                <video id="video-ponencia" controls playsinline preload="metadata">
+                  <source src="assets/video-ponencia-unidad2.mp4" type="video/mp4">
+                  Su navegador no admite la reproducción directa de video HTML5.
+                </video>
+              </div>
+              <div style="margin-top:0.85rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
+                <span style="font-size:0.825rem; color:var(--text-muted);">
+                  <strong>Título:</strong> Diseño Instruccional Audiovisual, Comunicación Telemática y Preproducción Técnico-Pedagógica
+                </span>
+                <span style="font-size:0.75rem; background:var(--primary-light); color:var(--primary); padding:0.25rem 0.5rem; border-radius:var(--radius-sm); font-weight:600;">
+                  ⏱️ Duración: 4m 03s | Formato HD H.264
+                </span>
+              </div>
+              <p style="font-size:0.825rem; color:var(--text-light); margin-top:0.5rem; line-height:1.45;">
+                <em>Resumen motivacional para su visualización:</em> En esta video-exposición se desglosan paso a paso las 8 etapas canónicas de preproducción de materiales educativos, analizando el circuito comunicacional emisor-canal-receptor en plataformas telemáticas y la integración didáctica de medios interactivos para erradicar la distancia transaccional en el e-learning.
+              </p>
+            </div>
+          </div>
+
+          <h3>El blended learning como articulación dialógica superior</h3>
+          <p>
+            La superación de la dicotomía entre presencia y virtualidad cristaliza en el modelo de <strong>aprendizaje mezclado o blended learning</strong>. Lejos de ser un simple híbrido logístico, representa una reconfiguración paradigmática del tiempo y el espacio pedagógico. Como afirma <a href="https://www.opentextbooks.org" target="_blank" rel="noopener">Bates (2019)</a>, bajo metodologías como el <em>aula invertida (flipped classroom)</em>, la asincronía asume la responsabilidad de la asimilación conceptual y la lectura crítica individual, mientras que el espacio síncrono (ya sea presencial o mediante videoconferencia) se preserva exclusivamente para la deliberación dialéctica, el aprendizaje basado en problemas y el co-diseño colaborativo.
+          </p>
+          <p>
+            El gestor de sistemas educativos basados en tecnología debe garantizar que el diseño instruccional de la institución no sucumba a la improvisación. La selección de un canal telemático no es un acto técnico neutro: es una <strong>decisión pedagógica y política</strong> que determina quiénes pueden acceder al conocimiento, qué nivel de profundidad cognoscitiva se alcanza y cómo se teje el vínculo humano entre el docente y la comunidad de aprendices.
+          </p>
+        </section>
+
+        <!-- Bloque 3: Pregunta de Discusión y Foros -->
+        <section class="discussion-block">
+          <div class="discussion-label">💬 Espacio de Interacción &amp; Debate Comunitario</div>
+          <div class="discussion-question-text">
+            Al estructurar una propuesta de blended learning en su institución, ¿qué criterios específicos pondera para decidir que un contenido debe tratarse asincrónicamente en foros versus síncronamente en videoconferencia? ¿Cómo evita sobrecargar la agenda de sus estudiantes?
+          </div>
+          <form class="comment-form" data-article-id="2">
+            <input type="text" class="comment-author-input comment-input" placeholder="Tu nombre y cargo académico / institución..." style="min-height: auto; padding: 0.5rem;" required>
+            <textarea class="comment-text-input comment-input" placeholder="Escribe tu reflexión o aporte crítico para el debate..." required></textarea>
+            <button type="submit" class="comment-submit-btn">Publicar Comentario en el Blog</button>
+          </form>
+          <div class="comments-feed" id="comments-feed-2"></div>
+        </section>
+
+        <!-- Referencias APA 7 -->
+        <footer class="apa-references">
+          <div class="apa-title">Referencias Bibliográficas (Normas APA 7.ª Edición)</div>
+          <ul class="apa-list">
+            <li>Bates, A. W. (2019). <em>Teaching in a digital age: Guidelines for designing teaching and learning</em> (2nd ed.). Tony Bates Associates Ltd. <a href="https://pressbooks.bccampus.ca" target="_blank" rel="noopener">https://pressbooks.bccampus.ca</a></li>
+            <li>Garrison, D. R., Anderson, T., &amp; Archer, W. (2000). Critical inquiry in a text-based environment: Computer conferencing in higher education. <em>The Internet and Higher Education</em>, 2(2-3), 87–105. <a href="https://doi.org/10.1016/S1096-7516(00)00016-6" target="_blank" rel="noopener">https://doi.org/10.1016/S1096-7516(00)00016-6</a></li>
+            <li>Moore, M. G. (1993). Theory of transactional distance. En D. Keegan (Ed.), <em>Theoretical principles of distance education</em> (pp. 22–38). Routledge.</li>
+            <li>Universidad Pedagógica Experimental Libertador [UPEL]. (2016). <em>Manual de trabajos de grado de especialización y maestría y tesis doctorales</em> (5.ª ed.). FEDUPEL.</li>
+          </ul>
+        </footer>
+      </div>
+    </article>
+
+    <!-- ====================================================================
+         ENTRADA 3: Arquitectura Tecnológica e Infraestructura de Redes
+         ==================================================================== -->
+    <article class="article-card" id="articulo-3" data-tags="ArquitecturaEdTech SistemasLMS Interoperabilidad">
+      <header class="article-metaphor-header">
+        <svg class="metaphor-bg-art" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="20" width="60" height="20" rx="3" stroke="currentColor" stroke-width="2" />
+          <rect x="20" y="45" width="60" height="20" rx="3" stroke="currentColor" stroke-width="2" />
+          <rect x="20" y="70" width="60" height="20" rx="3" stroke="currentColor" stroke-width="2" />
+          <line x1="50" y1="40" x2="50" y2="45" stroke="currentColor" stroke-width="2" />
+          <line x1="50" y1="65" x2="50" y2="70" stroke="currentColor" stroke-width="2" />
+        </svg>
+        <span class="metaphor-badge">Metáfora Visual: Los Cimientos de la Catedral Invisible</span>
+        <p class="metaphor-caption">
+          «Una propuesta curricular digital puede ostentar los discursos pedagógicos más elevados; si la infraestructura de redes, los protocolos de enrutamiento y la topología del servidor colapsan, la catedral entera se viene abajo.»
+        </p>
+      </header>
+
+      <div class="article-body">
+        <div class="article-meta-bar">
+          <span class="meta-item">📅 Noviembre 2026</span>
+          <span class="meta-item">⏱️ Lectura: 6 min</span>
+          <span class="meta-item">👤 Por Anthony Huice</span>
+          <div class="article-tags-wrapper">
+            <span class="article-tag">#ArquitecturaEdTech</span>
+            <span class="article-tag">#SistemasLMS</span>
+            <span class="article-tag">#Interoperabilidad</span>
+          </div>
+        </div>
+
+        <h2 class="article-title">Los cimientos invisibles del aula virtual: Por qué la pedagogía digital fracasa si la arquitectura telemática colapsa</h2>
+
+        <!-- Bloque 1: Título y Contexto -->
+        <section class="context-trigger-box">
+          <div class="context-trigger-title">⚡ Hecho Noticioso &amp; Disparador Contextual</div>
+          <p>
+            Durante las semanas de exámenes finales y cierres de períodos académicos, miles de universidades y escuelas alrededor del globo experimentan la fatídica "caída del campus virtual". Estudiantes que pierden entregas evaluativas, docentes frustrados por la latencia en la subida de calificaciones y departamentos de soporte saturados de quejas. Este colapso no es fruto del azar: obedece a una fractura gerencial recurrente donde las directivas toman decisiones curriculares ambiciosas sin auditar la arquitectura telemática, la capacidad de concurrencia y la interoperabilidad de su infraestructura de servidores.
+          </p>
+        </section>
+
+        <!-- Bloque 2: Análisis Crítico -->
+        <section class="critical-analysis-section">
+          <h3>La telemática como sustrato ontológico de la educación virtual</h3>
+          <p>
+            En la gerencia de sistemas educativos, es habitual encontrar directivos con sólida formación pedagógica pero escasa comprensión de las dinámicas de infraestructura tecnológica. Se concibe al software como una "caja negra" que simplemente debe funcionar. Sin embargo, como argumentan <a href="https://www.pearson.com" target="_blank" rel="noopener">Tanenbaum y Wetherall (2011)</a> en su obra canónica sobre redes de computadoras, todo entorno distribuido depende de compromisos de ingeniería estrictos: latencia, ancho de banda, tolerancia a fallos, enrutamiento de paquetes TCP/IP y protocolos de transporte.
+          </p>
+          <p>
+            Cuando una institución educativa adopta un sistema de gestión del aprendizaje (LMS por sus siglas en inglés, tales como Moodle, Canvas o Chamilo), está implementando una <strong>arquitectura Cliente-Servidor de múltiples capas</strong>. Cada interacción de un estudiante —desde responder un cuestionario automatizado hasta participar en un foro síncrono— genera transacciones en la base de datos relacional (MySQL/PostgreSQL), peticiones HTTP/HTTPS que atraviesan balanceadores de carga y consumo de memoria en el servidor de aplicaciones. Si el gerente educativo desconoce la diferencia entre un servidor dedicado escalable y un servicio de hosting compartido con recursos limitados, condenará a su institución a cuellos de botella severos en momentos de alta concurrencia.
+          </p>
+
+          <!-- Recurso Multimedia Adicional: Diagrama Arquitectónico -->
+          <div class="multimedia-container">
+            <div class="multimedia-header">
+              <span>🏗️ Recurso Multimedia: Pila Arquitectónica de un Ecosistema Telemático Educativo</span>
+            </div>
+            <div class="multimedia-body">
+              <div class="infographic-box">
+                <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
+                  Capas indispensables que el gerente educativo debe auditar para asegurar alta disponibilidad:
+                </p>
+                <div class="diagram-grid">
+                  <div class="diagram-item" style="border-left-color: #6366f1;">
+                    <h4 style="color:#6366f1;">Capa 1: Infraestructura y Red (WAN / ISP)</h4>
+                    <p>Conectividad troncal, conmutación de paquetes, acuerdos de nivel de servicio (SLA) con proveedores de telecomunicaciones y redundancia de enlaces.</p>
+                  </div>
+                  <div class="diagram-item" style="border-left-color: #06b6d4;">
+                    <h4 style="color:#06b6d4;">Capa 2: Servidores y Virtualización</h4>
+                    <p>Balanceadores de carga (Nginx/HAProxy), escalabilidad elástica en la nube, clústeres de base de datos optimizados y almacenamiento distribuido.</p>
+                  </div>
+                  <div class="diagram-item" style="border-left-color: #10b981;">
+                    <h4 style="color:#10b981;">Capa 3: Plataforma LMS e Interoperabilidad</h4>
+                    <p>Estándares LTI (Learning Tools Interoperability), SCORM, xAPI, autenticación federada (OAuth2, SAML) y pasarelas de integración con sistemas de registro académico.</p>
+                  </div>
+                  <div class="diagram-item" style="border-left-color: #f59e0b;">
+                    <h4 style="color:#f59e0b;">Capa 4: Seguridad y Gobernanza de Datos</h4>
+                    <p>Certificados SSL/TLS forzados, firewalls perimetrales (WAF), políticas de respaldos automáticos diarios y cumplimiento de normativas de privacidad estudiantil.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3>Interoperabilidad y sostenibilidad tecno-económica</h3>
+          <p>
+            Otro reto gerencial mayúsculo es evitar el <em>vendor lock-in</em> (secuestro por proveedor propietario). Muchos ecosistemas educativos caen en la trampa de contratar plataformas cerradas que cobran licencias exponenciales por cada usuario matriculado, lo cual deviene insostenible para instituciones públicas o de presupuesto modesto. Por el contrario, un enfoque gerencial fundamentado en <strong>software libre de nivel empresarial y estándares abiertos de interoperabilidad (LTI de 1EdTech)</strong> otorga soberanía tecnológica a la institución, permitiéndole conectar simuladores de laboratorio, sistemas de videoconferencia y bibliotecas virtuales sin pagar sobrecostos abusivos.
+          </p>
+          <p>
+            En conclusión, la gerencia de sistemas educativos exige líderes con visión híbrida: capaces de dialogar con el vicerrector pedagógico para traducir las competencias formativas en requerimientos funcionales, y al mismo tiempo capaces de fiscalizar al director de tecnología para exigir métricas de concurrencia, tiempo medio entre fallos (MTBF) y planes de contingencia ante desastres informáticos.
+          </p>
+        </section>
+
+        <!-- Bloque 3: Pregunta de Discusión y Foros -->
+        <section class="discussion-block">
+          <div class="discussion-label">💬 Espacio de Interacción &amp; Debate Comunitario</div>
+          <div class="discussion-question-text">
+            ¿Ha sufrido su centro educativo caídas de plataforma o cuellos de botella técnicos en épocas de alta demanda académica? Desde su posición, ¿cómo defendería ante el consejo directivo la inversión en arquitectura de servidores como una garantía directa del derecho a la educación?
+          </div>
+          <form class="comment-form" data-article-id="3">
+            <input type="text" class="comment-author-input comment-input" placeholder="Tu nombre y cargo académico / institución..." style="min-height: auto; padding: 0.5rem;" required>
+            <textarea class="comment-text-input comment-input" placeholder="Escribe tu reflexión o aporte crítico para el debate..." required></textarea>
+            <button type="submit" class="comment-submit-btn">Publicar Comentario en el Blog</button>
+          </form>
+          <div class="comments-feed" id="comments-feed-3"></div>
+        </section>
+
+        <!-- Referencias APA 7 -->
+        <footer class="apa-references">
+          <div class="apa-title">Referencias Bibliográficas (Normas APA 7.ª Edición)</div>
+          <ul class="apa-list">
+            <li>1EdTech Consortium. (2022). <em>Learning Tools Interoperability (LTI) core specification v1.3</em>. 1EdTech. <a href="https://www.1edtech.org" target="_blank" rel="noopener">https://www.1edtech.org</a></li>
+            <li>Bates, A. W. (2015). <em>Teaching in a digital age: Guidelines for designing teaching and learning</em>. Tony Bates Associates Ltd.</li>
+            <li>Laudon, K. C., &amp; Laudon, J. P. (2020). <em>Management information systems: Managing the digital firm</em> (16th ed.). Pearson.</li>
+            <li>Tanenbaum, A. S., &amp; Wetherall, D. J. (2011). <em>Redes de computadoras</em> (5.ª ed.). Pearson Educación.</li>
+          </ul>
+        </footer>
+      </div>
+    </article>
+
+    <!-- ====================================================================
+         ENTRADA 4: Podcast Educativo Oficial (Requisito 6 Obligatorio)
+         ==================================================================== -->
+    <article class="article-card" id="articulo-4" data-tags="GerenciaEducativa PodcastPedagogico LiderazgoSituacional">
+      <header class="article-metaphor-header">
+        <svg class="metaphor-bg-art" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="30" stroke="currentColor" stroke-width="2" />
+          <path d="M40 35 L65 50 L40 65 Z" fill="currentColor" />
+          <path d="M50 10 Q70 10 80 25" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M50 5 Q80 5 90 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+        <span class="metaphor-badge">Metáfora Visual: El Timonel Situacional en Altamar</span>
+        <p class="metaphor-caption">
+          «Las olas del cambio educativo nunca golpean con la misma fuerza ni desde la misma dirección; el gerente no puede anclarse a un modelo rígido: debe calibrar su timón situacional para navegar la tempestad sin perder de vista el faro formativo.»
+        </p>
+      </header>
+
+      <div class="article-body">
+        <div class="article-meta-bar">
+          <span class="meta-item">📅 Noviembre 2026</span>
+          <span class="meta-item">⏱️ Lectura: 7 min</span>
+          <span class="meta-item">🎙️ Incluye Podcast de Audio</span>
+          <div class="article-tags-wrapper">
+            <span class="article-tag">#GerenciaEducativa</span>
+            <span class="article-tag">#PodcastPedagogico</span>
+            <span class="article-tag">#LiderazgoSituacional</span>
+          </div>
+        </div>
+
+        <h2 class="article-title">La voz del cambio institucional: Fundamentos epistemológicos y liderazgo situacional en la gerencia pedagógica moderna</h2>
+
+        <!-- Bloque 1: Título y Contexto -->
+        <section class="context-trigger-box">
+          <div class="context-trigger-title">⚡ Hecho Noticioso &amp; Disparador Contextual</div>
+          <p>
+            En cumplimiento de la <strong>actividad central de la cuarta unidad</strong>, presentamos la integración del podcast educativo oficial grabado y conducido por la investigadora <strong>Lic. Emily Leidy Chacón de Romero</strong>, adscrita al Centro Local Anzoátegui de la Universidad Nacional Abierta (UNA). El detonante reflexivo del episodio radica en una interrogante perentoria: ¿por qué los modelos gerenciales importados del sector corporativo mercantil fracasan sistemáticamente cuando se implementan en recintos escolares sin una adaptación epistemológica previa? Este artículo analiza el núcleo conceptual de dicha producción sonora y ofrece las claves para su escucha crítica.
+          </p>
+        </section>
+
+        <!-- Bloque 2: Análisis Crítico -->
+        <section class="critical-analysis-section">
+          <h3>La irreductible especificidad de la gerencia educativa</h3>
+          <p>
+            Como señala con meridiana claridad la Lic. Chacón de Romero en la apertura de su disertación, la función gerencial general consiste en la coordinación, dirección y optimización integral de recursos humanos, materiales, financieros y tecnológicos para alcanzar metas de eficiencia mediante las fases universales de <em>Planificación, Organización, Dirección y Control</em> (<a href="https://dialnet.unirioja.es" target="_blank" rel="noopener">Chiavenato, 2014</a>). Sin embargo, la <strong>gerencia educativa posee una naturaleza teleológica diametralmente opuesta a la gerencia de empresas comerciales</strong>: su fin primordial no es maximizar el lucro económico ni la rentabilidad sobre la inversión de capital, sino garantizar la <strong>transformación social, la equidad ciudadana y la calidad del aprendizaje humano</strong>.
+          </p>
+          <p>
+            Esta distinción es medular para cualquier profesional que administre entornos virtuales de aprendizaje. El estudiante no es un "cliente", el docente no es un "empleado de línea de ensamble" y el conocimiento no es una "mercancía envasada". La gerencia educativa se nutre de cuatro corrientes epistemológicas interconectadas:
+          </p>
+          <ul style="margin: 0.75rem 0 1.25rem 1.5rem; line-height: 1.7; color: var(--text-main);">
+            <li><strong>Teoría clásica y orgánica:</strong> Aporta estructura, delimitación clara de roles, organigramas funcionales y orden operativo dentro del plantel o campus digital.</li>
+            <li><strong>Teoría humanista y de relaciones humanas:</strong> Coloca en el centro neurálgico el clima institucional, la motivación del profesorado, la empatía y la salud socioemocional de la comunidad.</li>
+            <li><strong>Teoría general de sistemas:</strong> Concibe al centro formativo como un sistema abierto, permeable, dinámico y no lineal, en interacción constante con la familia, la comunidad y el Estado.</li>
+            <li><strong>Fundamento socio-pedagógico:</strong> Establece el principio rector de que la técnica y la administración deben subordinarse siempre al fin supremo de la educación integral de la persona humana.</li>
+          </ul>
+
+          <!-- Recurso Multimedia Principal: Reproductor de Podcast Vocaroo (Requisito 6) -->
+          <div class="multimedia-container">
+            <div class="multimedia-header">
+              <span>🎙️ Podcast Educativo Oficial: Fundamentos Teóricos y Modelos Gerenciales</span>
+            </div>
+            <div class="multimedia-body">
+              <div class="audio-player-card">
+                <p style="font-size:0.875rem; color:var(--text-main); margin-bottom:0.25rem;">
+                  <strong>Ponente:</strong> Lic. Emily Leidy Chacón de Romero | <em>Centro Local Anzoátegui — UNA</em>
+                </p>
+                <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-md); padding:1rem; display:flex; align-items:center; gap:1.25rem; flex-wrap:wrap;">
+                  <!-- Embed Iframe Vocaroo -->
+                  <iframe src="https://vocaroo.com/embed/143LDvk3Ro19?autoplay=0" class="vocaroo-iframe-wrapper" allow="autoplay"></iframe>
+                  <div style="display:flex; flex-direction:column; gap:0.35rem;">
+                    <a href="https://voca.ro/143LDvk3Ro19" target="_blank" rel="noopener" style="font-size:0.85rem; font-weight:700; color:var(--primary); text-decoration:none; display:inline-flex; align-items:center; gap:0.35rem;">
+                      🔗 Escuchar directamente en Vocaroo.com ↗
+                    </a>
+                    <span style="font-size:0.75rem; color:var(--text-light);">
+                      Audio digital MP3 | 48 kHz Estéreo | Duración: 6m 30s
+                    </span>
+                  </div>
+                </div>
+                <p style="font-size:0.825rem; color:var(--text-muted); line-height:1.45; margin-top:0.25rem;">
+                  <em>Invitación a la escucha:</em> Le invitamos cordialmente a reproducir esta cápsula auditiva de reflexión, donde se recorre minuciosamente la transición desde los modelos de mando burocrático hasta el liderazgo comunicacional y situacional que demanda el siglo XXI.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <h3>Estructura jerárquica y la matriz de los siete modelos directivos</h3>
+          <p>
+            El análisis sonoro aborda con precisión la taxonomía de los niveles gerenciales en el ecosistema pedagógico: el <strong>nivel estratégico (alta gerencia)</strong> representado por rectores, directores y supervisores que definen las políticas macro y los planes de desarrollo a largo plazo; el <strong>nivel táctico (gerencia media)</strong> integrado por coordinadores pedagógicos y jefes de departamento que articulan la visión estratégica con la realidad de las cátedras; y el <strong>nivel operativo</strong> conformado por los docentes en el aula virtual o presencial, quienes ejecutan directamente la praxis de enseñanza-aprendizaje.
+          </p>
+          <p>
+            Asimismo, el podcast desglosa con gran rigor los siete modelos de gestión que coexisten en el ámbito educativo: el <em>modelo normativo</em> (apoyado en la rigidez y el liderazgo autocrático); el <em>modelo prospectivo</em> (que formula escenarios alternativos mediante un liderazgo visionario); el <em>modelo estratégico</em> (centrado en la matriz FODA y metas operativas cuantificables); el <em>modelo estratégico-situacional</em> (reconocedor de la viabilidad política y la negociación coyuntural); el <em>modelo de calidad total</em> (orientado a la excelencia de procesos con liderazgo servicial); el <em>modelo de reingeniería</em> (rediseño radical de paradigmas ante crisis severas); y el <em>modelo comunicacional</em> (que comprende a la escuela como una red lingüística de compromisos coordinados).
+          </p>
+          <p>
+            La conclusión definitiva de este análisis es categórica: el gerente de sistemas educativos contemporáneo <strong>no puede quedar encasillado en una única doctrina administrativa</strong>. Debe consolidarse como un <strong>líder situacional, integrador y profundamente humanista</strong> (<a href="https://www.worldcat.org" target="_blank" rel="noopener">Hersey &amp; Blanchard, 1988</a>), capaz de diagnosticar la madurez tecno-pedagógica de su equipo y modular su intervención entre la directriz técnica y la facilitación colaborativa.
+          </p>
+        </section>
+
+        <!-- Bloque 3: Pregunta de Discusión y Foros -->
+        <section class="discussion-block">
+          <div class="discussion-label">💬 Espacio de Interacción &amp; Debate Comunitario</div>
+          <div class="discussion-question-text">
+            Tras escuchar la exposición de la Lic. Chacón en el podcast, ¿cuál de los siete modelos gerenciales expuestos considera usted más urgente de implementar en su institución para evitar el anquilosamiento frente a los cambios tecnológicos? ¿Considera que el liderazgo situacional es viable en estructuras escolares altamente normadas?
+          </div>
+          <form class="comment-form" data-article-id="4">
+            <input type="text" class="comment-author-input comment-input" placeholder="Tu nombre y cargo académico / institución..." style="min-height: auto; padding: 0.5rem;" required>
+            <textarea class="comment-text-input comment-input" placeholder="Escribe tu reflexión o aporte crítico para el debate..." required></textarea>
+            <button type="submit" class="comment-submit-btn">Publicar Comentario en el Blog</button>
+          </form>
+          <div class="comments-feed" id="comments-feed-4"></div>
+        </section>
+
+        <!-- Referencias APA 7 -->
+        <footer class="apa-references">
+          <div class="apa-title">Referencias Bibliográficas (Normas APA 7.ª Edición)</div>
+          <ul class="apa-list">
+            <li>Chacón de Romero, E. L. (2026). <em>Aspectos fundamentales de la gerencia educativa: De las bases teóricas al liderazgo situacional</em> [Episodio de podcast de audio]. Vocaroo. <a href="https://voca.ro/143LDvk3Ro19" target="_blank" rel="noopener">https://voca.ro/143LDvk3Ro19</a></li>
+            <li>Chiavenato, I. (2014). <em>Comportamiento organizacional: La dinámica del éxito en las organizaciones</em> (3.ª ed.). McGraw-Hill Education.</li>
+            <li>Hersey, P., &amp; Blanchard, K. H. (1988). <em>Management of organizational behavior: Utilizing human resources</em> (5th ed.). Prentice-Hall.</li>
+            <li>Universidad Pedagógica Experimental Libertador [UPEL]. (2016). <em>Manual de trabajos de grado de especialización y maestría y tesis doctorales</em> (5.ª ed.). FEDUPEL.</li>
+          </ul>
+        </footer>
+      </div>
+    </article>
+
+    <!-- ====================================================================
+         ENTRADA 5: Learning Analytics y Toma de Decisiones Basada en Datos
+         ==================================================================== -->
+    <article class="article-card" id="articulo-5" data-tags="LearningAnalytics GobernanzaDeDatos TomaDeDecisiones">
+      <header class="article-metaphor-header">
+        <svg class="metaphor-bg-art" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polyline points="15,80 35,60 55,70 75,30 90,45" stroke="currentColor" stroke-width="2.5" fill="none" />
+          <circle cx="35" cy="60" r="4" fill="currentColor" />
+          <circle cx="55" cy="70" r="4" fill="currentColor" />
+          <circle cx="75" cy="30" r="4" fill="currentColor" />
+          <line x1="10" y1="85" x2="95" y2="85" stroke="currentColor" stroke-width="1.5" />
+          <line x1="10" y1="10" x2="10" y2="85" stroke="currentColor" stroke-width="1.5" />
+        </svg>
+        <span class="metaphor-badge">Metáfora Visual: El Radar Meteorológico de la Escuela</span>
+        <p class="metaphor-caption">
+          «Los datos telemáticos no son frías cifras contables: constituyen la cartografía térmica que alerta al capitán del barco sobre turbulencias académicas y riesgo de naufragio antes de que el estudiante decida abandonar el aula.»
+        </p>
+      </header>
+
+      <div class="article-body">
+        <div class="article-meta-bar">
+          <span class="meta-item">📅 Noviembre 2026</span>
+          <span class="meta-item">⏱️ Lectura: 6 min</span>
+          <span class="meta-item">👤 Por Anthony Huice</span>
+          <div class="article-tags-wrapper">
+            <span class="article-tag">#LearningAnalytics</span>
+            <span class="article-tag">#GobernanzaDeDatos</span>
+            <span class="article-tag">#TomaDeDecisiones</span>
+          </div>
+        </div>
+
+        <h2 class="article-title">El algoritmo como aliado pedagógico: Cómo la analítica de aprendizaje rescata trayectorias escolares antes de la deserción</h2>
+
+        <!-- Bloque 1: Título y Contexto -->
+        <section class="context-trigger-box">
+          <div class="context-trigger-title">⚡ Hecho Noticioso &amp; Disparador Contextual</div>
+          <p>
+            De acuerdo con los censos educativos regionales presentados en el Foro Mundial sobre Educación (<a href="https://www.unesco.org" target="_blank" rel="noopener">UNESCO, 2023</a>), las tasas de deserción en programas de educación a distancia en América Latina oscilan entre el 35% y el 52% durante el primer ciclo académico. Tradicionalmente, la administración escolar se percataba de este abandono de forma extemporánea, cuando el estudiante dejaba de pagar la matrícula o aparecía ausente en el acta final. Hoy, la analítica del aprendizaje (*Learning Analytics*) permite detectar las señales de desconexión en tiempo real, transformando la gerencia reactiva en una intervención preventiva y compasiva.
+          </p>
+        </section>
+
+        <!-- Bloque 2: Análisis Crítico -->
+        <section class="critical-analysis-section">
+          <h3>De la intuición burocrática a la evidencia empírica situada</h3>
+          <p>
+            Durante décadas, las decisiones de gestión escolar se tomaron a partir de impresiones subjetivas, anécdotas de pasillo o informes estáticos trimestrales. En las plataformas telemáticas contemporáneas, en cambio, cada acción formativa deja una huella digital verificable: el intervalo de tiempo transcurrido entre la publicación de una lectura y su consulta, los mapas de calor de navegación, el índice de interacción en hilos de debate y los patrones temporales de envío de tareas. Como conceptualizan <a href="https://dl.acm.org" target="_blank" rel="noopener">Siemens y Long (2011)</a>, la <strong>analítica del aprendizaje</strong> consiste en la medición, recopilación, análisis y presentación de datos sobre los aprendices y sus contextos, con el propósito expreso de comprender y optimizar el aprendizaje y los entornos en que ocurre.
+          </p>
+          <p>
+            Para el gerente educativo, la analítica de aprendizaje no es un fin técnico, sino una <strong>brújula de gobernanza institucional</strong>. Permite estructurar lo que los especialistas denominan <em>Sistemas de Alerta Temprana (Early Warning Systems)</em>. Mediante modelos estadísticos y algoritmos de regresión logística, la plataforma puede alertar al equipo de coordinación que un determinado grupo de estudiantes presenta un alto riesgo de reprobación semanas antes de los exámenes parciales, al contrastar su ritmo de ingreso y su baja participación en las actividades formativas preliminares.
+          </p>
+
+          <!-- Recurso Multimedia Adicional: Tablero Simulado de Learning Analytics -->
+          <div class="multimedia-container">
+            <div class="multimedia-header">
+              <span>📈 Recurso Multimedia: Tablero de Comando Directivo (Dashboard Analítico Simulado)</span>
+            </div>
+            <div class="multimedia-body">
+              <div class="infographic-box">
+                <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
+                  Simulación de indicadores de alerta temprana analizados en tiempo real por el equipo gerencial:
+                </p>
+                <div class="diagram-grid">
+                  <div class="diagram-item" style="border-left-color: #10b981;">
+                    <h4 style="color:#10b981;">Índice de Retención Proyectada</h4>
+                    <p style="font-size:1.4rem; font-weight:800; color:var(--text-main); margin:0.3rem 0;">86.4%</p>
+                    <p>+4.2% respecto al período anterior tras la implementación de tutorías proactivas automatizadas.</p>
+                  </div>
+                  <div class="diagram-item" style="border-left-color: #f59e0b;">
+                    <h4 style="color:#f59e0b;">Alumnos en Umbral de Riesgo</h4>
+                    <p style="font-size:1.4rem; font-weight:800; color:var(--text-main); margin:0.3rem 0;">38 de 412</p>
+                    <p>Estudiantes con inactividad superior a 7 días continuos en la plataforma telemática institucional.</p>
+                  </div>
+                  <div class="diagram-item" style="border-left-color: #3b82f6;">
+                    <h4 style="color:#3b82f6;">Tiempo Medio de Retroalimentación</h4>
+                    <p style="font-size:1.4rem; font-weight:800; color:var(--text-main); margin:0.3rem 0;">28.5 hrs</p>
+                    <p>Velocidad con la que los docentes corrigen y comentan las entregas asincrónicas en los foros.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3>Gobernanza ética y desmitificación del tecnocentrismo</h3>
+          <p>
+            No obstante su inmenso potencial, la analítica del aprendizaje encierra dilemas éticos y gerenciales de primer orden. Como advierte <a href="https://www.tandfonline.com" target="_blank" rel="noopener">Daniel (2015)</a>, la recopilación masiva de datos biométricos y de comportamiento en plataformas escolares puede degenerar en un "panóptico digital" o en la creación de <em>perfiles estigmatizantes</em> que condenen al estudiante de antemano mediante profecías autocumplidas inducidas por algoritmos opacos.
+          </p>
+          <p>
+            Es responsabilidad ineludible de la gerencia institucional establecer <strong>políticas transparentes de gobernanza y privacidad de datos</strong>: consentimiento informado de la comunidad, anonimización rigurosa de registros de investigación, derecho al olvido y prohibición taxativa de comercializar la telemetría académica. La analítica nunca debe desplazar la mirada empática del educador: su propósito no es reemplazar el criterio pedagógico, sino dotarlo de luz para tender la mano al estudiante antes de que se pierda en el silencio digital.
+          </p>
+        </section>
+
+        <!-- Bloque 3: Pregunta de Discusión y Foros -->
+        <section class="discussion-block">
+          <div class="discussion-label">💬 Espacio de Interacción &amp; Debate Comunitario</div>
+          <div class="discussion-question-text">
+            Si su institución implementara hoy un tablero de analítica de aprendizaje predictiva, ¿cuál sería la primera política de acompañamiento docente que usted activaría para evitar que los estudiantes identificados en riesgo sean catalogados o marginados inconscientemente?
+          </div>
+          <form class="comment-form" data-article-id="5">
+            <input type="text" class="comment-author-input comment-input" placeholder="Tu nombre y cargo académico / institución..." style="min-height: auto; padding: 0.5rem;" required>
+            <textarea class="comment-text-input comment-input" placeholder="Escribe tu reflexión o aporte crítico para el debate..." required></textarea>
+            <button type="submit" class="comment-submit-btn">Publicar Comentario en el Blog</button>
+          </form>
+          <div class="comments-feed" id="comments-feed-5"></div>
+        </section>
+
+        <!-- Referencias APA 7 -->
+        <footer class="apa-references">
+          <div class="apa-title">Referencias Bibliográficas (Normas APA 7.ª Edición)</div>
+          <ul class="apa-list">
+            <li>Daniel, B. (2015). Big Data and analytics in higher education: Opportunities and challenges. <em>British Journal of Educational Technology</em>, 46(5), 904–920. <a href="https://doi.org/10.1111/bjet.12230" target="_blank" rel="noopener">https://doi.org/10.1111/bjet.12230</a></li>
+            <li>Ferguson, R. (2012). Learning analytics: Drivers, developments and challenges. <em>International Journal of Technology Enhanced Learning</em>, 4(5-6), 304–317.</li>
+            <li>Siemens, G., &amp; Long, P. (2011). Penetrating the fog: Analytics in learning and education. <em>EDUCAUSE Review</em>, 46(5), 30–40. <a href="https://er.educause.edu" target="_blank" rel="noopener">https://er.educause.edu</a></li>
+            <li>UNESCO. (2023). <em>Informe de seguimiento de la educación en el mundo 2023: Tecnología en la educación: ¿Una herramienta en los términos de quién?</em>. Ediciones UNESCO.</li>
+          </ul>
+        </footer>
+      </div>
+    </article>
+
+    <!-- ====================================================================
+         ENTRADA 6: Inteligencia Artificial y Ética Institucional
+         ==================================================================== -->
+    <article class="article-card" id="articulo-6" data-tags="InteligenciaArtificial EticaEducativa PoliticasInstitucionales">
+      <header class="article-metaphor-header">
+        <svg class="metaphor-bg-art" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="50,15 85,35 85,75 50,95 15,75 15,35" stroke="currentColor" stroke-width="2" fill="none" />
+          <circle cx="50" cy="55" r="15" stroke="currentColor" stroke-width="2" />
+          <line x1="50" y1="15" x2="50" y2="40" stroke="currentColor" stroke-width="1.5" />
+          <line x1="15" y1="35" x2="38" y2="48" stroke="currentColor" stroke-width="1.5" />
+          <line x1="85" y1="35" x2="62" y2="48" stroke="currentColor" stroke-width="1.5" />
+        </svg>
+        <span class="metaphor-badge">Metáfora Visual: El Fuego de Prometeo en el Consejo Directivo</span>
+        <p class="metaphor-caption">
+          «La Inteligencia Artificial es un fuego potente que puede iluminar las mentes o incinerar los cimientos de la integridad académica; el directivo no debe apagar la llama por miedo, sino forjar la brújula ética para gobernar su poder.»
+        </p>
+      </header>
+
+      <div class="article-body">
+        <div class="article-meta-bar">
+          <span class="meta-item">📅 Noviembre 2026</span>
+          <span class="meta-item">⏱️ Lectura: 6 min</span>
+          <span class="meta-item">👤 Por Anthony Huice</span>
+          <div class="article-tags-wrapper">
+            <span class="article-tag">#InteligenciaArtificial</span>
+            <span class="article-tag">#EticaEducativa</span>
+            <span class="article-tag">#PoliticasInstitucionales</span>
+          </div>
+        </div>
+
+        <h2 class="article-title">Inteligencia artificial en el consejo directivo: Políticas institucionales, integridad académica y la brújula ética de la escuela</h2>
+
+        <!-- Bloque 1: Título y Contexto -->
+        <section class="context-trigger-box">
+          <div class="context-trigger-title">⚡ Hecho Noticioso &amp; Disparador Contextual</div>
+          <p>
+            Desde la masificación de los modelos generativos de lenguaje y las herramientas de automatización inteligente, instituciones escolares de todo el mundo reaccionaron inicialmente con prohibiciones tajantes en sus reglamentos, bloqueando accesos de red y declarando "guerra abierta" al plagio algorítmico. Sin embargo, en su histórica guía sobre IA en educación (<a href="https://unesdoc.unesco.org" target="_blank" rel="noopener">UNESCO, 2023b</a>), el organismo internacional advirtió que la prohibición es una ilusión retrógrada: las escuelas no necesitan policías de software punitivos, sino marcos de gobernanza institucional que enseñen a pensar críticamente *junto* a la inteligencia artificial.
+          </p>
+        </section>
+
+        <!-- Bloque 2: Análisis Crítico -->
+        <section class="critical-analysis-section">
+          <h3>La encrucijada del liderazgo tecno-pedagógico</h3>
+          <p>
+            La irrupción de la inteligencia artificial generativa marca un punto de inflexión comparable a la invención de la imprenta de tipos móviles o el surgimiento de la Web. Ante este escenario, la gerencia educativa enfrenta dos tentaciones simplistas: la <strong>postura tecnofóbica de clausura</strong> (bloquear plataformas, forzar el retorno exclusivo al papel y lápiz bajo vigilancia policial) y la <strong>postura tecnofílica acrítica</strong> (asumir que la IA resolverá mágicamente los problemas estructurales de comprensión lectora y pensamiento abstracto sin intervención humana).
+          </p>
+          <p>
+            Un liderazgo gerencial de nivel estratégico debe asumir una postura <strong>crítica, propositiva y humanocéntrica</strong>. Como sostiene <a href="https://www.nature.com" target="_blank" rel="noopener">Holmes et al. (2019)</a>, la inteligencia artificial en la educación debe operar al servicio de tres frentes armónicos: <em>aprender CON la IA</em> (utilizarla como andamiaje cognitivo, tutor socrático y co-diseñador de proyectos), <em>aprender SOBRE la IA</em> (alfabetizar a estudiantes y profesores sobre sesgos algorítmicos, huella de carbono y protección de datos) y <em>aprender PARA la IA</em> (fomentar las competencias exclusivamente humanas que ninguna máquina puede emular: empatía, juicio ético situado, creatividad estética y solidaridad social).
+          </p>
+
+          <!-- Recurso Multimedia Adicional: Matriz Ética UNESCO -->
+          <div class="multimedia-container">
+            <div class="multimedia-header">
+              <span>🧭 Recurso Multimedia: Marco de Gobernanza Institucional para Adopción de IA</span>
+            </div>
+            <div class="multimedia-body">
+              <div class="infographic-box">
+                <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
+                  Dimensiones de la política institucional que todo equipo directivo debe reglamentar formalmente:
+                </p>
+                <div class="diagram-grid">
+                  <div class="diagram-item" style="border-left-color: #ec4899;">
+                    <h4 style="color:#ec4899;">1. Evaluación Auténtica</h4>
+                    <p>Sustitución de ensayos memorísticos por defensas orales, estudios de caso situados, ABP y proyectos de impacto en la comunidad real.</p>
+                  </div>
+                  <div class="diagram-item" style="border-left-color: #8b5cf6;">
+                    <h4 style="color:#8b5cf6;">2. Transparencia y Declaración</h4>
+                    <p>Políticas claras donde el estudiante cite y declare el uso de agentes de IA como copilotos de ideación, justificando su criterio de curaduría.</p>
+                  </div>
+                  <div class="diagram-item" style="border-left-color: #3b82f6;">
+                    <h4 style="color:#3b82f6;">3. Equidad de Acceso</h4>
+                    <p>Garantizar que las licencias de IA avanzada no creen una brecha entre quienes pueden pagar suscripciones prémium y los estudiantes vulnerables.</p>
+                  </div>
+                  <div class="diagram-item" style="border-left-color: #10b981;">
+                    <h4 style="color:#10b981;">4. Formación Continua Docente</h4>
+                    <p>Capacitación en ingeniería de prompts pedagógicos, detección de sesgos y diseño de experiencias formativas aumentadas por tecnología.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3>Redefinición de la evaluación y del valor del aprendizaje</h3>
+          <p>
+            El verdadero desafío gerencial que introduce la IA no es técnico, sino axiológico. Si un modelo lingüístico es capaz de aprobar un examen de conocimientos factuales en cuestión de segundos, lo que está en crisis no es la tecnología: <strong>es el sistema de evaluación tradicional de la escuela</strong>. Cuando una institución califica la simple repetición mecánica de contenidos, está entrenando a los estudiantes para tareas en las que la máquina siempre será más rápida y barata.
+          </p>
+          <p>
+            El gerente educativo debe impulsar una reforma curricular profunda hacia la <strong>evaluación auténtica</strong> (<a href="https://www.tandfonline.com" target="_blank" rel="noopener">Wiggins, 1998</a>), donde el mérito radique en la formulación de preguntas complejas, la triangulación crítica de evidencias contrastadas y la toma de decisiones morales ante dilemas reales de la sociedad. La tecnología debe despojarse de su fetiche para revelarse como lo que siempre debió ser: una prótesis cognitiva al servicio de la sabiduría humana.
+          </p>
+        </section>
+
+        <!-- Bloque 3: Pregunta de Discusión y Foros -->
+        <section class="discussion-block">
+          <div class="discussion-label">💬 Espacio de Interacción &amp; Debate Comunitario</div>
+          <div class="discussion-question-text">
+            En su institución educativa, ¿se ha discutido o formalizado una política institucional sobre el uso de la Inteligencia Artificial? ¿Se orienta hacia la prohibición y la sanción o hacia la integración crítica en las rúbricas de evaluación auténtica?
+          </div>
+          <form class="comment-form" data-article-id="6">
+            <input type="text" class="comment-author-input comment-input" placeholder="Tu nombre y cargo académico / institución..." style="min-height: auto; padding: 0.5rem;" required>
+            <textarea class="comment-text-input comment-input" placeholder="Escribe tu reflexión o aporte crítico para el debate..." required></textarea>
+            <button type="submit" class="comment-submit-btn">Publicar Comentario en el Blog</button>
+          </form>
+          <div class="comments-feed" id="comments-feed-6"></div>
+        </section>
+
+        <!-- Referencias APA 7 -->
+        <footer class="apa-references">
+          <div class="apa-title">Referencias Bibliográficas (Normas APA 7.ª Edición)</div>
+          <ul class="apa-list">
+            <li>Holmes, W., Bialik, M., &amp; Fadel, C. (2019). <em>Artificial intelligence in education: Promises and implications for teaching and learning</em>. Center for Curriculum Redesign.</li>
+            <li>UNESCO. (2023a). <em>Guidance for generative AI in education and research</em>. UNESCO Publishing. <a href="https://unesdoc.unesco.org" target="_blank" rel="noopener">https://unesdoc.unesco.org</a></li>
+            <li>UNESCO. (2023b). <em>Consenso de Beijing sobre la inteligencia artificial y la educación</em>. Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura.</li>
+            <li>Wiggins, G. (1998). <em>Educative assessment: Designing assessments to inform and improve student performance</em>. Jossey-Bass Publishers.</li>
+          </ul>
+        </footer>
+      </div>
+    </article>
+
+    <!-- ====================================================================
+         ENTRADA 7: Prospectiva, Ecosistemas Híbridos y Educación 2030
+         ==================================================================== -->
+    <article class="article-card" id="articulo-7" data-tags="ProspectivaEducativa ModelosHibridos Educacion2030">
+      <header class="article-metaphor-header">
+        <svg class="metaphor-bg-art" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="42" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 4" />
+          <path d="M50 8 L50 92 M8 50 L92 50" stroke="currentColor" stroke-width="1" opacity="0.4" />
+          <polygon points="50,20 65,50 50,45 35,50" fill="currentColor" />
+          <circle cx="50" cy="50" r="5" fill="currentColor" />
+        </svg>
+        <span class="metaphor-badge">Metáfora Visual: El Árbol Biónico del Ecosistema Escolar</span>
+        <p class="metaphor-caption">
+          «Las raíces de la institución educativa deben permanecer firmemente afianzadas en la tierra del compromiso social y los valores humanistas; mientras sus ramas telemáticas se extienden con audacia hacia el cielo del porvenir digital.»
+        </p>
+      </header>
+
+      <div class="article-body">
+        <div class="article-meta-bar">
+          <span class="meta-item">📅 Noviembre 2026</span>
+          <span class="meta-item">⏱️ Lectura: 7 min</span>
+          <span class="meta-item">👤 Por Anthony Huice</span>
+          <div class="article-tags-wrapper">
+            <span class="article-tag">#ProspectivaEducativa</span>
+            <span class="article-tag">#ModelosHibridos</span>
+            <span class="article-tag">#Educacion2030</span>
+          </div>
+        </div>
+
+        <h2 class="article-title">La escuela expandida hacia el 2030: Sostenibilidad, ubicuidad y el renacimiento del pacto socioeducativo</h2>
+
+        <!-- Bloque 1: Título y Contexto -->
+        <section class="context-trigger-box">
+          <div class="context-trigger-title">⚡ Hecho Noticioso &amp; Disparador Contextual</div>
+          <p>
+            Al aproximarnos al tramo decisivo de la Agenda 2030 de las Naciones Unidas para el Desarrollo Sostenible (en especial el Objetivo de Desarrollo Sostenible 4: Educación Inclusiva, Equitativa y de Calidad), las proyecciones demográficas y telemáticas constatan un hecho irreversible: la escuela física monolítica y monocéntrica ya no ostenta el monopolio del saber. La proliferación del microaprendizaje móvil, los ecosistemas de recursos educativos abiertos (REA) y las redes comunitarias de investigación demandan una gestión directiva prospectiva capaz de diseñar escenarios institucionales viables en entornos altamente turbulentos.
+          </p>
+        </section>
+
+        <!-- Bloque 2: Análisis Crítico -->
+        <section class="critical-analysis-section">
+          <h3>La prospectiva estratégica como método directivo</h3>
+          <p>
+            Planificar la educación con retrovisor —repitiendo mecánicamente las fórmulas que sirvieron a finales del siglo XX— es la antesala de la irrelevancia institucional. Como postulaba el insigne teórico de la prospectiva <a href="https://www.dunod.com" target="_blank" rel="noopener">Godet (2007)</a>, el futuro no se padece pasivamente como un destino inexorable; el futuro se anticipa, se explora y se construye mediante la acción estratégica concertada. Para un gerente educativo, la <strong>prospectiva estratégica</strong> es el arte de vislumbrar escenarios plausibles (el <em>escenario tendencial</em>, el <em>escenario de crisis</em> y el <em>escenario deseable y viable</em>), a fin de preparar la arquitectura institucional para responder con resiliencia a cualquier contingencia telemática o social.
+          </p>
+          <p>
+            Hacia el año 2030, las instituciones educativas que logren prosperar no serán necesariamente aquellas con mayores presupuestos de adquisición de hardware de lujo, sino las que consoliden un <strong>ecosistema híbrido centrado en la persona</strong>. Este modelo híbrido va mucho más allá de transmitir clases sincrónicas en vivo por Zoom; implica el diseño de un tejido educativo sin fisuras donde los límites entre el aula física, el laboratorio comunitario, la biblioteca digital y el espacio virtual se desvanecen en favor de trayectorias de aprendizaje continuas y situadas (<a href="https://www.uoc.edu" target="_blank" rel="noopener">Gros &amp; García-Peñalvo, 2016</a>).
+          </p>
+
+          <!-- Recurso Multimedia Adicional: Radar de Tendencias 2030 -->
+          <div class="multimedia-container">
+            <div class="multimedia-header">
+              <span>📡 Recurso Multimedia: Radar Prospectivo de Innovaciones Educativas al 2030</span>
+            </div>
+            <div class="multimedia-body">
+              <div class="infographic-box">
+                <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
+                  Vectores directivos que configurarán la sostenibilidad de los sistemas educativos:
+                </p>
+                <div class="diagram-grid">
+                  <div class="diagram-item" style="border-left-color: #10b981;">
+                    <h4 style="color:#10b981;">1. Microcredenciales Verificables</h4>
+                    <p>Reconocimiento granular de competencias y habilidades prácticas mediante credenciales digitales abiertas y firmas criptográficas interoperables.</p>
+                  </div>
+                  <div class="diagram-item" style="border-left-color: #3b82f6;">
+                    <h4 style="color:#3b82f6;">2. Aulas Híbridas Ubicuas</h4>
+                    <p>Espacios físicos dotados de microfonía inteligente y pizarras concurrentes donde conviven estudiantes presenciales y remotos sin menoscabo afectivo.</p>
+                  </div>
+                  <div class="diagram-item" style="border-left-color: #8b5cf6;">
+                    <h4 style="color:#8b5cf6;">3. Recursos Educativos Abiertos (REA)</h4>
+                    <p>Soberanía curricular sustentada en libros, simuladores y objetos de aprendizaje con licencias Creative Commons, eliminando el costo de textos comerciales.</p>
+                  </div>
+                  <div class="diagram-item" style="border-left-color: #f59e0b;">
+                    <h4 style="color:#f59e0b;">4. Ecosostenibilidad Digital</h4>
+                    <p>Servidores con eficiencia energética garantizada, reducción de la basura electrónica y concientización sobre el consumo eléctrico del almacenamiento cloud.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3>El renacimiento del pacto socioeducativo</h3>
+          <p>
+            Al cerrar esta serie monográfica sobre la <strong>Gerencia de Sistemas Educativos basados en Tecnología</strong>, se impone una conclusión ética fundamental: los cables de fibra óptica, las bases de datos relacionales, los algoritmos predictivos y los campus virtuales no tienen un valor inherente en sí mismos. Adquieren sentido y dignidad humana únicamente cuando se transforman en herramientas para derribar las barreras de exclusión geográfica, económica y generacional que durante siglos marginaron a millones de personas del acceso a la cultura letrada y a la ciencia.
+          </p>
+          <p>
+            El gerente educativo del siglo XXI es, en última instancia, un <strong>guardián de la esperanza pedagógica</strong>. Es aquel directivo que, en medio de la vorágine tecnológica, se niega a convertir a su escuela en una fábrica tecnocrática desalmada, y en su lugar la custodia como un refugio de encuentro democrático, pensamiento libre y convivencia solidaria. Liderar la tecnología es, ante todo, dignificar lo humano.
+          </p>
+        </section>
+
+        <!-- Bloque 3: Pregunta de Discusión y Foros -->
+        <section class="discussion-block">
+          <div class="discussion-label">💬 Espacio de Interacción &amp; Debate Comunitario</div>
+          <div class="discussion-question-text">
+            Proyectando su mirada hacia el año 2030, ¿cuál considera usted que será la competencia gerencial y humana más decisiva que deberá cultivar un líder educativo para mantener su institución viva, inclusiva y relevante en la era de los ecosistemas telemáticos globales?
+          </div>
+          <form class="comment-form" data-article-id="7">
+            <input type="text" class="comment-author-input comment-input" placeholder="Tu nombre y cargo académico / institución..." style="min-height: auto; padding: 0.5rem;" required>
+            <textarea class="comment-text-input comment-input" placeholder="Escribe tu reflexión o aporte crítico para el debate..." required></textarea>
+            <button type="submit" class="comment-submit-btn">Publicar Comentario en el Blog</button>
+          </form>
+          <div class="comments-feed" id="comments-feed-7"></div>
+        </section>
+
+        <!-- Referencias APA 7 -->
+        <footer class="apa-references">
+          <div class="apa-title">Referencias Bibliográficas (Normas APA 7.ª Edición)</div>
+          <ul class="apa-list">
+            <li>Godet, M. (2007). <em>Prospectiva estratégica: Para las empresas y los territorios</em>. UNESCO / Laboratoire d’Investigation en Prospective, Stratégie et Organisation (LIPSOR).</li>
+            <li>Gros, B., &amp; García-Peñalvo, F. J. (2016). Future trends in the design strategies and technological support of e-learning. En M. Spector (Ed.), <em>The Wiley handbook of learning technology</em> (pp. 264–278). John Wiley &amp; Sons.</li>
+            <li>UNESCO. (2020). <em>Declaración de Incheon y Marco de Acción para la realización del Objetivo de Desarrollo Sostenible 4</em>. Ediciones UNESCO. <a href="https://unesdoc.unesco.org" target="_blank" rel="noopener">https://unesdoc.unesco.org</a></li>
+            <li>Universidad Pedagógica Experimental Libertador [UPEL]. (2016). <em>Manual de trabajos de grado de especialización y maestría y tesis doctorales</em> (5.ª ed.). FEDUPEL.</li>
+          </ul>
+        </footer>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- Pie de Página Institucional -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p style="font-weight:700; color:var(--text-main); font-size:1rem;">
+        Gestión &amp; Tecno-Pedagogía — Blog Académico de Divulgación
+      </p>
+      <p>
+        Actividad Evaluativa Cuarta Unidad | Gerencia de Sistemas Educativos basados en Tecnología.<br>
+        Investigación y Desarrollo por <strong>Anthony Huice</strong>. En colaboración especial con la <strong>Lic. Emily Leidy Chacón de Romero</strong> (Centro Local Anzoátegui — UNA).
+      </p>
+      <div class="footer-links">
+        <a href="#inicio">↑ Volver al Inicio</a>
+        <a href="#articulo-4">🎙️ Podcast de Audio</a>
+        <a href="#articulo-2">🎥 Ponencia de la Unidad 2</a>
+        <a href="https://voca.ro/143LDvk3Ro19" target="_blank" rel="noopener">Enlace en Vocaroo ↗</a>
+      </div>
+      <p style="font-size:0.75rem; color:var(--text-light); margin-top:1rem;">
+        Publicado bajo Licencia Internacional Creative Commons Atribución-NoComercial 4.0 (CC BY-NC 4.0) — Formato normalizado según directrices del Manual UPEL (5.ª ed.) y Normas APA (7.ª ed.).
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
