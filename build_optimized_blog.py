@@ -31,7 +31,7 @@ POSTS = [
         "multimedia_type": "audio",
         "discussion_question": "¿Considera usted que en nuestras instituciones educativas prevalece aún el modelo normativo burocrático, o se evidencia una transición real hacia el liderazgo situacional y comunicacional? ¿Cuál es el principal freno estructural que impide dicha evolución?",
         "references": [
-            "Chacón de Romero, E. L. (2026). <em>Aspectos fundamentales de la gerencia educativa: De las bases teóricas al liderazgo situacional</em> [Episodio de podcast de audio]. Vocaroo. <a href=\"https://voca.ro/143LDvk3Ro19\" target=\"_blank\" rel=\"noopener\">https://voca.ro/143LDvk3Ro19</a>",
+            "Chacón de Romero, E. L. (2026). <em>Aspectos fundamentales de la gerencia educativa: De las bases teóricas al liderazgo situacional</em> [Episodio de podcast de audio]. Vocaroo. <a href=\"https://voca.ro/1i8rKfimqgjM\" target=\"_blank\" rel=\"noopener\">https://voca.ro/1i8rKfimqgjM</a>",
             "Chiavenato, I. (2014). <em>Comportamiento organizacional: La dinámica del éxito en las organizaciones</em> (3.ª ed.). McGraw-Hill Educación.",
             "Fullan, M. (2016). <em>The new meaning of educational change</em> (5th ed.). Teachers College Press.",
             "Hersey, P., & Blanchard, K. H. (1988). <em>Management of organizational behavior: Utilizing human resources</em> (5th ed.). Prentice-Hall.",
@@ -226,27 +226,24 @@ def render_multimedia(post):
     <span style="font-size: 1.6rem;">🎙️</span>
     <div>
       <strong style="font-size: 1.05rem; color: #1e293b; display: block; font-family: sans-serif;">Podcast Educativo Oficial: Fundamentos y Modelos de la Gerencia Educativa</strong>
-      <span style="font-size: 0.85rem; color: #475569; font-family: sans-serif;">Ponente: Lic. Emily Leidy Chacón de Romero | Centro Local Anzoátegui — UNA (Duración: 6m 30s)</span>
+      <span style="font-size: 0.85rem; color: #475569; font-family: sans-serif;">Ponente: Lic. Emily Leidy Chacón de Romero | Centro Local Anzoátegui — UNA (Duración: 5m 33s)</span>
     </div>
   </div>
   
-  <!-- Reproductor Nativo HTML5 -->
+  <!-- Reproductor Oficial Vocaroo -->
   <div style="margin: 15px 0;">
-    <label style="font-size: 0.825rem; font-weight: bold; color: #2563eb; display: block; margin-bottom: 5px; font-family: sans-serif;">
-      ▶️ Reproductor de Audio Integrado (Escucha Inmediata):
+    <label style="font-size: 0.825rem; font-weight: bold; color: #2563eb; display: block; margin-bottom: 6px; font-family: sans-serif;">
+      ▶️ Reproductor Integrado (Escucha Inmediata):
     </label>
-    <audio controls preload="metadata" style="width: 100%; border-radius: 8px;">
-      <source src="https://anthony-huice.github.io/blog-gerencia-educativa/assets/podcast-educativo.mp3" type="audio/mpeg">
-      Su navegador no admite la reproducción de audio HTML5.
-    </audio>
+    <iframe src="https://vocaroo.com/embed/1i8rKfimqgjM?autoplay=0" style="width: 100%; max-width: 500px; height: 60px; border: 0; border-radius: 8px;" allow="autoplay"></iframe>
   </div>
   
   <!-- Enlace oficial directo Vocaroo -->
   <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; padding-top: 10px; border-top: 1px dashed #cbd5e1;">
-    <a href="https://voca.ro/143LDvk3Ro19" target="_blank" rel="noopener" style="background: #2563eb; color: #ffffff; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem; font-family: sans-serif; display: inline-flex; align-items: center; gap: 6px;">
-      🔗 Escuchar en enlace oficial de Vocaroo (https://voca.ro/143LDvk3Ro19) ↗
+    <a href="https://voca.ro/1i8rKfimqgjM" target="_blank" rel="noopener" style="background: #2563eb; color: #ffffff; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem; font-family: sans-serif; display: inline-flex; align-items: center; gap: 6px;">
+      🔗 Escuchar en enlace oficial de Vocaroo (https://voca.ro/1i8rKfimqgjM) ↗
     </a>
-    <span style="font-size: 0.78rem; color: #64748b; font-family: sans-serif;">Audio digital MP3 | 48 kHz Mono | 390 segundos</span>
+    <span style="font-size: 0.78rem; color: #64748b; font-family: sans-serif;">Audio digital MP3 | 48 kHz Mono | 333 segundos</span>
   </div>
 </div>
 '''
@@ -254,14 +251,14 @@ def render_multimedia(post):
         return '''
 <div style="background: #0f172a; border-radius: 12px; overflow: hidden; margin: 25px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.15);">
   <div style="background: #1e293b; color: #f8fafc; padding: 12px 18px; font-weight: bold; font-size: 0.95rem; font-family: sans-serif; display: flex; align-items: center; gap: 8px;">
-    <span>🎥</span> Ponencia Oficial Unidad 2: Diseño Instruccional y Comunicación Telemática
+    <span>🎥</span> Video-Exposición Oficial: Habilidades Gerenciales y Liderazgo en Entornos Educativos Basados en Tecnología
   </div>
-  <video controls playsinline preload="metadata" style="width: 100%; max-height: 420px; display: block; background: #000;">
+  <video controls playsinline preload="metadata" style="width: 100%; max-height: 480px; display: block; background: #000;">
     <source src="https://anthony-huice.github.io/blog-gerencia-educativa/assets/video-ponencia-unidad2.mp4" type="video/mp4">
     Su navegador no soporta la reproducción de video HTML5.
   </video>
   <div style="padding: 12px 18px; background: #1e293b; color: #94a3b8; font-size: 0.8rem; font-family: sans-serif;">
-    <em>Duración: 4m 03s | Ficha: Producción técnico-pedagógica audiovisual para la educación a distancia.</em>
+    <em>Duración: 5m 33s | Ponente: Ing. Emileidy Chacón | Centro Local Anzoátegui — UNA.</em>
   </div>
 </div>
 '''

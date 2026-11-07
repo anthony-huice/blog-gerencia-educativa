@@ -76,7 +76,7 @@ En la carpeta `/home/anthony/Escritorio/pdvsa 2/blogger_entradas/` tienes los 7 
 ## 🔊 PASO 4: Verificación del Audio y los Medios
 
 - **Podcast de Audio (Entrada 4):**
-  - Viene configurado con un reproductor HTML5 que reproduce directamente el archivo de audio exacto de Vocaroo (duración 6m 30s de la Lic. Emily Leidy Chacón), además del enlace directo a `https://voca.ro/143LDvk3Ro19`.
+  - Viene configurado con un reproductor HTML5 que reproduce directamente el archivo de audio exacto de Vocaroo (duración 5m 33s de la Lic. Emily Leidy Chacón), además del enlace directo a `https://voca.ro/1i8rKfimqgjM`.
 - **Ponencia en Video (Entrada 2):**
   - Viene configurada con el reproductor de video de la exposición y su descripción motivacional.
 - **Comentarios y Debate:**

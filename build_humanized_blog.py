@@ -29,7 +29,7 @@ POSTS = [
             "El fortalecimiento de la gestión educativa requiere directivos capaces de combinar la claridad operativa con una visión humana del trabajo institucional. Frente a los desafíos actuales de nuestras escuelas y universidades, cabe preguntarse: ¿hasta qué punto predomina aún en nuestras instituciones un enfoque burocrático tradicional, y qué condiciones prácticas se necesitan para consolidar un liderazgo situacional en el día a día académico?"
         ],
         "references": [
-            "Chacón de Romero, E. L. (2026). <em>Aspectos fundamentales de la gerencia educativa: De las bases teóricas al liderazgo situacional</em> [Episodio de podcast de audio]. Vocaroo. <a href=\"https://voca.ro/143LDvk3Ro19\" target=\"_blank\" rel=\"noopener\">https://voca.ro/143LDvk3Ro19</a>",
+            "Chacón de Romero, E. L. (2026). <em>Aspectos fundamentales de la gerencia educativa: De las bases teóricas al liderazgo situacional</em> [Episodio de podcast de audio]. Vocaroo. <a href=\"https://voca.ro/1i8rKfimqgjM\" target=\"_blank\" rel=\"noopener\">https://voca.ro/1i8rKfimqgjM</a>",
             "Chiavenato, I. (2014). <em>Comportamiento organizacional: La dinámica del éxito en las organizaciones</em> (3.ª ed.). McGraw-Hill Educación.",
             "Fullan, M. (2016). <em>The new meaning of educational change</em> (5th ed.). Teachers College Press.",
             "Hersey, P., & Blanchard, K. H. (1988). <em>Management of organizational behavior: Utilizing human resources</em> (5th ed.). Prentice-Hall.",
@@ -212,8 +212,8 @@ def render_multimedia(post):
   </div>
   
   <div style="font-size: 0.825rem;">
-    <a href="https://voca.ro/143LDvk3Ro19" target="_blank" rel="noopener" style="color: #2563eb; text-decoration: underline; font-weight: bold;">
-      Enlace directo a Vocaroo (https://voca.ro/143LDvk3Ro19) ↗
+    <a href="https://voca.ro/1i8rKfimqgjM" target="_blank" rel="noopener" style="color: #2563eb; text-decoration: underline; font-weight: bold;">
+      Enlace directo a Vocaroo (https://voca.ro/1i8rKfimqgjM) ↗
     </a>
   </div>
 </div>
@@ -222,13 +222,17 @@ def render_multimedia(post):
         return '''
 <div style="background: #0f172a; border-radius: 8px; overflow: hidden; margin: 24px 0;">
   <div style="background: #1e293b; color: #f8fafc; padding: 10px 14px; font-weight: bold; font-size: 0.9rem;">
-    🎥 Ponencia Unidad 2: Comunicación Telemática y Preproducción Audiovisual
+    🎥 Video-Exposición Oficial: Habilidades Gerenciales y Liderazgo en Entornos Educativos Basados en Tecnología
   </div>
-  <video controls playsinline preload="metadata" style="width: 100%; max-height: 420px; display: block; background: #000;">
+  <video controls playsinline preload="metadata" style="width: 100%; max-height: 480px; display: block; background: #000;">
     <source src="https://anthony-huice.github.io/blog-gerencia-educativa/assets/video-ponencia-unidad2.mp4" type="video/mp4">
     Su navegador no soporta la reproducción de video HTML5.
   </video>
   <div style="padding: 10px 14px; background: #1e293b; color: #94a3b8; font-size: 0.8rem;">
+    <em>Duración: 5m 33s | Ponente: Ing. Emileidy Chacón | Centro Local Anzoátegui — UNA.</em>
+  </div>
+</div>
+'''  <div style="padding: 10px 14px; background: #1e293b; color: #94a3b8; font-size: 0.8rem;">
     Duración: 4m 03s | Grabación de la video-exposición sobre preproducción técnico-pedagógica.
   </div>
 </div>
