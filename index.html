@@ -43,11 +43,21 @@
         <p class="lead">
           Una bitácora de reflexión crítica, rigor académico y divulgación situada sobre los desafíos, modelos y directrices que transforman la gestión de instituciones educativas mediadas por tecnologías de la información y la comunicación.
         </p>
-        <div style="display:flex; gap:1rem; flex-wrap:wrap; font-size:0.85rem; color:var(--text-light);">
+        <div style="display:flex; gap:1rem; flex-wrap:wrap; font-size:0.85rem; color:var(--text-light); margin-bottom:1.25rem;">
           <span>📚 7 Artículos Monográficos</span>
           <span>🎙️ 1 Podcast Educativo Oficial</span>
           <span>🎥 1 Video-Exposición / Ponencia</span>
           <span>📖 Normas APA 7.ª Edición</span>
+        </div>
+        <!-- Acceso Rápido al Podcast Requerido -->
+        <div style="background:var(--bg-card); border:1px solid var(--border); border-left:4px solid var(--accent); border-radius:var(--radius-md); padding:0.85rem 1.15rem; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.75rem;">
+          <div>
+            <strong style="font-size:0.85rem; color:var(--text-main); display:block;">🎙️ Podcast de la Unidad (Audio Oficial Exacto de Vocaroo)</strong>
+            <span style="font-size:0.75rem; color:var(--text-light);">Lic. Emily Leidy Chacón de Romero — Fundamentos y Modelos de la Gerencia Educativa (6m 30s)</span>
+          </div>
+          <a href="#articulo-4" class="tag-filter-btn active" style="text-decoration:none; display:inline-flex; align-items:center; gap:0.35rem; font-size:0.8rem; padding:0.4rem 0.85rem;">
+            ▶️ Ir al Reproductor de Audio
+          </a>
         </div>
       </div>
 
@@ -522,15 +532,24 @@
                 <p style="font-size:0.875rem; color:var(--text-main); margin-bottom:0.25rem;">
                   <strong>Ponente:</strong> Lic. Emily Leidy Chacón de Romero | <em>Centro Local Anzoátegui — UNA</em>
                 </p>
-                <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-md); padding:1rem; display:flex; align-items:center; gap:1.25rem; flex-wrap:wrap;">
-                  <!-- Embed Iframe Vocaroo -->
-                  <iframe src="https://vocaroo.com/embed/143LDvk3Ro19?autoplay=0" class="vocaroo-iframe-wrapper" allow="autoplay"></iframe>
-                  <div style="display:flex; flex-direction:column; gap:0.35rem;">
-                    <a href="https://voca.ro/143LDvk3Ro19" target="_blank" rel="noopener" style="font-size:0.85rem; font-weight:700; color:var(--primary); text-decoration:none; display:inline-flex; align-items:center; gap:0.35rem;">
-                      🔗 Escuchar directamente en Vocaroo.com ↗
+                <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-md); padding:1.25rem; display:flex; flex-direction:column; gap:1rem;">
+                  <!-- Reproductor de Audio Nativo con el archivo exacto de Vocaroo -->
+                  <div>
+                    <label style="font-size:0.825rem; font-weight:700; color:var(--primary); display:block; margin-bottom:0.4rem;">
+                      ▶️ Reproducir Audio Oficial del Podcast (Vocaroo Exacto):
+                    </label>
+                    <audio id="podcast-audio-player" controls preload="metadata" style="width:100%; border-radius:var(--radius-sm);">
+                      <source src="assets/podcast-educativo.mp3" type="audio/mpeg">
+                      Su navegador no soporta la reproducción de audio HTML5.
+                    </audio>
+                  </div>
+                  
+                  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem; padding-top:0.5rem; border-top:1px dashed var(--border);">
+                    <a href="https://voca.ro/143LDvk3Ro19" target="_blank" rel="noopener" style="font-size:0.85rem; font-weight:700; color:var(--primary); text-decoration:none; display:inline-flex; align-items:center; gap:0.35rem; background:var(--primary-light); padding:0.4rem 0.8rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
+                      🔗 Abrir enlace original en Vocaroo (https://voca.ro/143LDvk3Ro19) ↗
                     </a>
                     <span style="font-size:0.75rem; color:var(--text-light);">
-                      Audio digital MP3 | 48 kHz Estéreo | Duración: 6m 30s
+                      Audio original descargado de Vocaroo | 48 kHz Mono | 390 segundos (6m 30s)
                     </span>
                   </div>
                 </div>
